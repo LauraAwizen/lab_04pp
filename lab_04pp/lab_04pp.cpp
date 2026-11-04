@@ -35,8 +35,11 @@ using namespace std;
 ////zad.2
 //void funkcja2();
 //zad.3
-void funkcja31(int a, int b);
-void funkcja32(int a, int b);
+//void funkcja31(int a, int b);
+//void funkcja32(int a, int b);
+//zad.4
+void funkcja41(int a, int b, int c);
+void funkcja42(int a, int b, int c);
 
 
 int main (){
@@ -50,12 +53,17 @@ int main (){
 //
 //funkcja2();
 //zad.3
-int a, b;
-cout << "podaj 2 liczby:";
-cin >> a >> b;
-funkcja31(a, b);
-funkcja32(a, b);
-
+//int a, b;
+//cout << "podaj 2 liczby:";
+//cin >> a >> b;
+//funkcja31(a, b);
+//funkcja32(a, b);
+//zad.4
+int a, b, c;
+cout << "podaj 3 liczby:";
+cin >> a >> b >> c;
+funkcja41(a, b, c);
+funkcja42(a, b, c);
 		return 0;
 }
 //zad.1
@@ -72,25 +80,47 @@ funkcja32(a, b);
 //	}
 //}
 //zad.3
-void funkcja31(int a, int b) {
-	if (a > b) {
+//void funkcja31(int a, int b) {
+//	if (a > b) {
+//		cout << a << "<" << b;
+//	}
+//	else if (a < b) {
+//		cout << b << "<" << a;
+//	}
+//	else if (a == b) {
+//		cout << a << "=" << b;
+//	}
+//}
+//void funkcja32(int a, int b) {
+//	if (a > b) {
+//		cout << a;
+//	}
+//	else if (b < a) {
+//		cout << b;
+//	}
+//	else if (a == b) {
+//		cout << a << "=" << b;
+//	}
+//}
+void funkcja41(int a, int b, int c) {
+	if (a < b && a < c) {
+		cout << a << "<" << b << "," << c;
+	}
+	else if (b < a && b < c) {
+		cout << b << "<" << a << "'" << c;
+	}
+	else if (c < a && c < b) {
+		cout << c << "<" << a << "," << b;
+	}
+	else if (a == b && a < c) {
+		cout << a << "<" << c;
+	}
+	else if (a == c && a < b) {
 		cout << a << "<" << b;
 	}
-	else if (a < b) {
+	else if (b == c && b < a) {
 		cout << b << "<" << a;
 	}
-	else if (a == b) {
-		cout << a << "=" << b;
+	else if (a == b && a == c) {
+		cout << a << "=" << b << "=" << c;
 	}
-}
-void funkcja32(int a, int b) {
-	if (a > b) {
-		cout << a;
-	}
-	else if (b < a) {
-		cout << b;
-	}
-	else if (a == b) {
-		cout << a << "=" << b;
-	}
-}
