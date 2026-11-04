@@ -22,9 +22,14 @@ void f(int n);
 //int srednia(int x, int y);
 //zad.8
 //void pitagoras(double a, double b, double c);
+// //zad.9
+void suma(double x, double y);
+void roznica(double x, double y);
+void iloczyn(double x, double y);
+void iloraz(double x, double y);
 //zad.10
-int suma1(int x);
-void suma2(int x);
+//int suma1(int x);
+//void suma2(int x);
 
 int main (){
 	//zad.1
@@ -72,12 +77,35 @@ f(n);
 //cin >> a >> b;
 //pitagoras(a, b, c);
 
+//zad.9
+double x, y;
+char znak;
+cout << "podaj 2 liczby:";
+cin >> x >> y;
+cout << "znak dzialania:";
+cin >> znak;
+if (znak == '+') {
+	suma(x, y);
+}
+else if (znak == '-') {
+	roznica(x, y);
+}
+else if (znak == '*') {
+	iloczyn(x, y);
+}
+else if (znak == '/' && y == 0) {
+	cout << "nie mozna dzielic przez 0!!!";
+}
+else if (znak == '/') {
+	iloraz(x, y);
+}
+
 //zad.10
-int x;
-cout << "podaj liczbe skladnikow do zsumowania" << endl;
-cin >> x;
-suma1(x);
-suma2(x);
+//int x;
+//cout << "podaj liczbe skladnikow do zsumowania" << endl;
+//cin >> x;
+//suma1(x);
+//suma2(x);
 return 0;
 }
 //zad.1
@@ -193,24 +221,43 @@ void f(int n) {
 //	c = sqrt(a * a + b * b);
 //	cout << "dlugosc przeciwprostakatnej to:" << c;
 //}
+// //zad.9
+void suma(double x, double y){
+    cout<<x+y;
+}
+void roznica(double x, double y){
+    cout<<x-y;
+}
+void iloczyn(double x, double y){
+    cout<<x*y;
+}
+void iloraz(double x, double y){
+    if (y == 0) {
+		cout << "nie mozna dzielic przez 0!!!";
+	}
+	else{
+		cout<<x/y;
+	}
+}
+
 //zad.10
-int suma1(int x) {
-    int suma, a;
-    suma = 0;
-    for (int i = 1; i <= x; i++) {
-        cout << "podaj skladnik do sumy";
-        cin >> a;
-        suma += a;
-    }
-    return suma;
-}
-void suma2(int x) {
-    int suma, a;
-    suma = 0;
-    for (int i = 1; i <= x; i++) {
-        cout << "podaj skladnik do sumy";
-        cin >> a;
-        suma += a;
-    }
-    cout << "suma:" << suma;
-}
+//int suma1(int x) {
+//    int suma, a;
+//    suma = 0;
+//    for (int i = 1; i <= x; i++) {
+//        cout << "podaj skladnik do sumy";
+//        cin >> a;
+//        suma += a;
+//    }
+//    return suma;
+//}
+//void suma2(int x) {
+//    int suma, a;
+//    suma = 0;
+//    for (int i = 1; i <= x; i++) {
+//        cout << "podaj skladnik do sumy";
+//        cin >> a;
+//        suma += a;
+//    }
+//    cout << "suma:" << suma;
+//}
