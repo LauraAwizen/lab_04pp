@@ -39,7 +39,7 @@ using namespace std;
 //void funkcja32(int a, int b);
 //zad.4
 void funkcja41(int a, int b, int c);
-void funkcja42(int a, int b, int c);
+int zwracanie(int a, int b, int c);
 
 
 int main (){
@@ -63,7 +63,7 @@ int a, b, c;
 cout << "podaj 3 liczby:";
 cin >> a >> b >> c;
 funkcja41(a, b, c);
-funkcja42(a, b, c);
+zwracanie(a, b, c);
 return 0;
 }
 //zad.1
@@ -125,7 +125,7 @@ void funkcja41(int a, int b, int c) {
 		cout << a << "=" << b << "=" << c;
 	}
 }
-int funkcja42(int a, int b, int c) {
+int zwracanie(int a, int b, int c) {
 	if (a < b && a < c) {
 		return a;
 	}
