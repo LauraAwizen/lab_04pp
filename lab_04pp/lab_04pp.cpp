@@ -40,6 +40,8 @@ using namespace std;
 //zad.4
 void funkcja41(int a, int b, int c);
 int zwracanie(int a, int b, int c);
+//zad.5
+double pole(double& wysokosc, double& podstawa);
 
 
 int main (){
@@ -64,6 +66,10 @@ cout << "podaj 3 liczby:";
 cin >> a >> b >> c;
 funkcja41(a, b, c);
 zwracanie(a, b, c);
+//zad.5
+double wysokosc, podstawa;
+pole(wysokosc, podstawa);
+cout << endl << "podwojone pole trojkata wynosi:" << podstawa * wysokosc;
 return 0;
 }
 //zad.1
@@ -148,4 +154,12 @@ int zwracanie(int a, int b, int c) {
 		return a;
 	}
 }
-
+//zad.5
+double pole(double& wysokosc, double& podstawa) {
+	cout << "podaj podstawe:";
+	cin >> podstawa;
+	cout << "podaj wysokosc:";
+	cin >> wysokosc;
+	cout << "pole trojkata wynosi:" << podstawa * wysokosc / 2;
+	return podstawa * wysokosc / 2;
+}
