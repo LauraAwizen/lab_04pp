@@ -36,7 +36,7 @@ using namespace std;
 //void funkcja2();
 //zad.3
 //void funkcja31(int a, int b);
-//void funkcja32(int a, int b);
+//void funkja32(int a, int b);
 //zad.4
 void funkcja41(int a, int b, int c);
 int zwracanie(int a, int b, int c);
