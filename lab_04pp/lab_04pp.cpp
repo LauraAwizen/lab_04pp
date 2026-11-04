@@ -30,7 +30,8 @@ void iloraz(double x, double y);
 //zad.10
 //int suma1(int x);
 //void suma2(int x);
-
+//zad.11
+int obwod(double bok1, double bok2);
 int main (){
 	//zad.1
 //string imie;
@@ -106,6 +107,12 @@ else if (znak == '/') {
 //cin >> x;
 //suma1(x);
 //suma2(x);
+
+//zad.11
+double bok1, bok2;
+cout << "podaj dlugosci bokow prostakata:";
+cin >> bok1 >> bok2;
+obwod(bok1, bok2);
 return 0;
 }
 //zad.1
@@ -261,3 +268,7 @@ void iloraz(double x, double y){
 //    }
 //    cout << "suma:" << suma;
 //}
+//zad.11
+int obwod(double bok1, double bok2) {
+	return bok1 * 2 + bok2 * 2;
+}
