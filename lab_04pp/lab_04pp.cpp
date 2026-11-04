@@ -64,7 +64,7 @@ cout << "podaj 3 liczby:";
 cin >> a >> b >> c;
 funkcja41(a, b, c);
 funkcja42(a, b, c);
-		return 0;
+return 0;
 }
 //zad.1
 //void funkja(string imie) {
@@ -124,3 +124,28 @@ void funkcja41(int a, int b, int c) {
 	else if (a == b && a == c) {
 		cout << a << "=" << b << "=" << c;
 	}
+}
+int funkcja42(int a, int b, int c) {
+	if (a < b && a < c) {
+		return a;
+	}
+	else if (b < a && b < c) {
+		return b;
+	}
+	else if (c < a && c < b) {
+		return c;
+	}
+	else if (a == b && a < c) {
+		return a;
+	}
+	else if (a == c && a < b) {
+		return a;
+	}
+	else if (b == c && b < a) {
+		return b;
+	}
+	else if (a == b && a == c) {
+		return a;
+	}
+}
+
