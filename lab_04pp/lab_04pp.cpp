@@ -6,39 +6,64 @@ using namespace std;
 
 //zad.1
 //void funkja(string imie);
+// 
 //zad.2
 //void funkcja2();
+// 
 //zad.3
 //void funkcja31(int a, int b);
 //void funkja32(int a, int b);
+// 
 //zad.4
 //void funkcja41(int a, int b, int c);
 //int zwracanie(int a, int b, int c);
+// 
 //zad.5
 double pole(double& wysokosc, double& podstawa);
+
 //zad.6
-void f(int n);
+//void f(int n);
+
 //zad.7
 //int srednia(int x, int y);
+// 
 //zad.8
 //void pitagoras(double a, double b, double c);
-// //zad.9
+// 
+//zad.9
 //void suma(double x, double y);
 //void roznica(double x, double y);
 //void iloczyn(double x, double y);
 //void iloraz(double x, double y);
+// 
 //zad.10
 //int suma1(int x);
 //void suma2(int x);
+// 
 //zad.11
 int obwod(double bok1, double bok2);
+
 //zad.12
-void v();
+//void v();
+
 //zad.13
-int potegi(int a, int b);
+//int potegi(int a, int b);
+
 //zad.14
-int silnia(int n);
+//int silnia(int n);
+// 
 //zad.15
+int potegan(int n);
+
+//zad.16
+void losowanie(int liczba);
+
+//zad.17
+//int parzyste(int x);
+//int nieparzyste(int x);
+
+//zad.18
+int szescian(int x);
 
 int main (){
 	//zad.1
@@ -70,10 +95,11 @@ pole(wysokosc, podstawa);
 cout  << "podwojone pole trojkata wynosi:" << podstawa * wysokosc;
 
 //zad.6
-int n;
-cout << "podaj liczbe:";
-cin >> n;
-f(n);
+//int n;
+//cout << "podaj liczbe:";
+//cin >> n;
+//f(n);
+
 //zad.7
 //int x, y;
 //cout << "podaj 2 liczby:";
@@ -123,18 +149,43 @@ cin >> bok1 >> bok2;
 obwod(bok1, bok2);
 
 //zad.12
-v();
+//v();
 
 //zad.13
-int a, b;
-potegi(a, b);
+//int a, b;
+//potegi(a, b);
 
 //zad.14
+//int n;
+//silnia(n);
+
+//zad.15
 int n;
-silnia(n);
+potegan(n);
 
+//zad.16
+int liczba;
+int sec = time(NULL);
+srand(sec);
+cout << "seed: " << sec << endl;
+losowanie(liczba);
 
+//zad.17
+//int x;
+//x = 0;
+//for (int i = 0; i <= 100; i++) {
+//	x++;
+//	if (x % 2 == 0) {
+//		parzyste(x);
+//	}
+//	else {
+//		nieparzyste(x);
+//	}
+//}
 
+//zad.18
+int x;
+szescian(x);
 return 0;
 }
 
@@ -231,14 +282,14 @@ double pole(double& wysokosc, double& podstawa) {
 	return podstawa * wysokosc / 2;
 }
 //zad.6
-void f(int n) {
-	cout << "dzielniki " << n << " to:";
-	for (int dzielnik = 1; dzielnik <= n; dzielnik++) {
-		if (n % dzielnik == 0) {
-			cout << dzielnik << ", ";
-		}
-	}
-}
+//void f(int n) {
+//	cout << "dzielniki " << n << " to:";
+//	for (int dzielnik = 1; dzielnik <= n; dzielnik++) {
+//		if (n % dzielnik == 0) {
+//			cout << dzielnik << ", ";
+//		}
+//	}
+//}
 //zad7
 //int srednia(int x, int y) {
 //	int a, b;
@@ -296,33 +347,99 @@ int obwod(double bok1, double bok2) {
 	return bok1 * 2 + bok2 * 2;
 }
 //zad.12
-void v() {
-	int x, y, z;
-	cout << "podaj dlugosci krawedzi prostopadloscianu:";
-	cin >> x >> y >> z;
-	cout << x * y * z;
+//void v() {
+//	int x, y, z;
+//	cout << "podaj dlugosci krawedzi prostopadloscianu:";
+//	cin >> x >> y >> z;
+//	cout << x * y * z;
 }
 //zad.13
-int potegi(int a, int b) {
-	int c;
-	c = 1;
-	cout << "podaj 2 liczby";
-	cin >> a >> b;
-	for (a = 1; a <= b; a++) {
-		c *= a;
-	}
-	return c;
-}
+//int potegi(int a, int b) {
+//	int c;
+//	c = 1;
+//	cout << "podaj 2 liczby";
+//	cin >> a >> b;
+//	for (a = 1; a <= b; a++) {
+//		c *= a;
+//	}
+//	return c;
+//}
 //zad.14
-int silnia(int n) {
+//int silnia(int n) {
+//	int c;
+//	c = 1;
+//	cout << "podaj liczbe naturalna:";
+//	cin >> n;
+//	for (int i = 1; i <= n; i++) {
+//		c = c * i;
+//	}
+//	cout << c;
+//	return c;
+//}
+//zad.15
+//a)
+int potegan(int n) {
 	int c;
-	c = 1;
-	cout << "podaj liczbe naturalna:";
+	cout << "podaj liczbe:";
 	cin >> n;
-	for (int i = 1; i <= n; i++) {
-		c = c * i;
+	c = 1;
+	for (int i = 1;i <= n; i++) {
+		c *= 2;
 	}
 	cout << c;
 	return c;
+//b)
+	int potegan(int n) {
+
+		cout << "podaj liczbe:";
+		cin >> n;
+
+		cout << pow(2, n);
+		return  pow(2, n);
+	}
 }
-//zad.15
+
+//zad.16
+void losowanie(int liczba) {
+	int los, p;
+	p = 0;
+	cout << "podaj liczbe:";
+	cin >> liczba;int min = 1;
+	int max = 10;
+
+	for (int i = 0; i < 10; i++) {
+		los = rand() % (max - min + 1) + min;
+		cout << los << endl;
+		if (liczba == los) {
+			p++;
+		}
+	}
+	cout << "zawartosc:" << p << endl << "procentowo:" << p*10 << "%";
+}
+
+//zad.17
+//int nieparzyste(int x) {
+//	cout << (x - 1) / 2;
+//	return (x - 1) / 2;
+//}
+//int parzyste(int x) {
+//	cout << x / 2;
+//	return x / 2;
+//}
+//zad.18
+int szescian(int x) {
+	cout << "podaj liczbe:";
+	cin >> x;
+	if (x % 6 == 0) {
+		cout << 0;
+		return 0;
+	}
+	else if (x % 3 == 0) {
+		cout << pow(x, 3);
+		return pow(x, 3);
+	}
+	else if (x % 2 == 0) {
+		cout << pow(x, 2);
+		return pow(x, 2);
+	}
+}
